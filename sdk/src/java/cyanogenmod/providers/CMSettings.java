@@ -1231,6 +1231,17 @@ public final class CMSettings {
         public static final Validator BATTERY_LIGHT_PULSE_VALIDATOR =
                 sBooleanValidator;
 
+         /**
+         * Whether the battery light should only be enabled on fully charged battery.
+         * The value is boolean (1 or 0).
+         * @hide
+         */
+        public static final String BATTERY_LIGHT_ONLY_FULLY_CHARGED = "battery_light_only_fully_charged";
+
+        /** @hide */
+        public static final Validator BATTERY_LIGHT_ONLY_FULLY_CHARGED_VALIDATOR =
+                sBooleanValidator;
+
         /**
          * What color to use for the battery LED while charging - low
          */
@@ -1935,6 +1946,7 @@ public final class CMSettings {
                 CMSettings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
                 CMSettings.System.BATTERY_LIGHT_ENABLED,
                 CMSettings.System.BATTERY_LIGHT_PULSE,
+                CMSettings.System.BATTERY_LIGHT_ONLY_FULLY_CHARGED,
                 CMSettings.System.BATTERY_LIGHT_LOW_COLOR,
                 CMSettings.System.BATTERY_LIGHT_MEDIUM_COLOR,
                 CMSettings.System.BATTERY_LIGHT_FULL_COLOR,
@@ -2084,6 +2096,7 @@ public final class CMSettings {
                     TORCH_LONG_PRESS_POWER_GESTURE_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_ENABLED, BATTERY_LIGHT_ENABLED_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_PULSE, BATTERY_LIGHT_PULSE_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_ONLY_FULLY_CHARGED, BATTERY_LIGHT_ONLY_FULLY_CHARGED_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_LOW_COLOR, BATTERY_LIGHT_LOW_COLOR_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_MEDIUM_COLOR, BATTERY_LIGHT_MEDIUM_COLOR_VALIDATOR);
             VALIDATORS.put(BATTERY_LIGHT_FULL_COLOR, BATTERY_LIGHT_FULL_COLOR_VALIDATOR);
